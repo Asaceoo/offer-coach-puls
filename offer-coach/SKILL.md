@@ -22,7 +22,7 @@ description: 求职全流程教练：岗位截图/JD 分析、简历匹配诊断
 offer-coach/
 ├── jobs/
 │   ├── index.md                  # 岗位池索引（总表）
-│   └── {job-id}/                 # job-id = 公司简称-岗位简称- MMDD，如 tongfu-pinzh-1024
+│   └── {job-id}/                 # job-id = 公司简称-岗位简称-MMDD，如 tongfu-pinzh-1024
 │       ├── profile.md            # 岗位档案 + 四维分析
 │       ├── match-report.md       # 简历匹配诊断
 │       ├── tailored-resume.md    # 定制简历
@@ -36,7 +36,7 @@ offer-coach/
 
 **规则**
 - **首用骨架**：创建 `jobs/`、`resume/`、`playbook.md`（从模板实例化）三样；`exports/` 等首次导出时再建。job-id 格式固定 `{公司拼音或英文简称}-{岗位拼音或英文简称}-{MMDD}`：字母段各取 2~6 个小写字母（公司原名超长时取开头音节或公认缩写，如 GreenWood→gw），日期段 MMDD 为 4 位数字不受字母限制；连字符分隔、无空格；同日同公司多岗位时末尾加 `-2` 区分。
-- 首次使用时创建目录骨架。每次会话开始处理求职请求前，先读 `jobs/index.md` 和 `resume/master.md`（存在才读），恢复上下文。
+- 每次会话开始处理求职请求前，先读 `jobs/index.md` 和 `resume/master.md`（存在才读），恢复上下文。
 - 主简历只完整解析一次存入 `master.md`；之后所有匹配、定制基于它，不要求用户重复上传。
 - 每完成一个文件立即落盘，再进行下一步（阶段门控）——会话中断也能从文件恢复。
 - **引用锚点**："引用用户简历原文"一律指引用 `resume/master.md` 中的对应条目。简历是图片/PDF 时先 OCR/解析归一化进 `master.md` 再引用，这样任何格式下引用都成立、可校验。
@@ -83,7 +83,7 @@ offer-coach/
 ## 独立流程（按用户请求触发）
 
 ### 面试辅导（用户收到面试通知）
-读 `references/interview-plan.md`。从通知文本/截图解析：时间、轮次、形式、面试官、注意事项；缺项一次问齐。产出 `interview-plan.md`（D-3/D-1/D-0 任务清单）并主动提议创建提醒（用 automation 工具，一次性、面试前 2 小时）。引用该岗位 `question-bank.md` 生成押题重点，引用 `playbook.md` 里的历史卡点。🔴 CHECKPOINT：创建提醒前必须征得用户同意，拒绝就跳过且不再劝。
+读 `references/interview-plan.md`。从通知文本/截图解析：时间、轮次、形式、面试官、注意事项；缺项一次问齐。产出 `interview-plan.md`（D-3/D-1/D-0 任务清单，模板 `assets/templates/interview-plan.md`）并主动提议创建提醒（用 automation 工具，一次性、面试前 2 小时）。引用该岗位 `question-bank.md` 生成押题重点，引用 `playbook.md` 里的历史卡点。🔴 CHECKPOINT：创建提醒前必须征得用户同意，拒绝就跳过且不再劝。
 
 ### 面试复盘（用户面完后）
 读 `references/review-template.md`。引导用户口述或粘贴面试情况，产出 `review-{n}.md`。复盘卡必须有"下一场第一个要改的动作"——这是复盘有效的判据。落盘后：把新卡点合并进 `playbook.md`，并在会话里问一句是否更新简历话术。🔴 CHECKPOINT：复盘卡落盘后先向用户展示"下一场第一个要改的动作"，确认无误再反哺 playbook。
