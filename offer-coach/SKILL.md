@@ -25,10 +25,8 @@ offer-coach/
 ├── jobs/
 │   ├── index.md                  # 岗位池索引（总表）
 │   └── {job-id}/                 # job-id = 公司简称-岗位简称-MMDD，如 tongfu-pinzh-1024
-│       ├── profile.md            # 岗位档案 + 四维分析
-│       ├── match-report.md       # 简历匹配诊断
-│       ├── tailored-resume.md    # 定制简历
-│       ├── question-bank.md      # 题库（15~20 题）
+│       ├── report.md             # 岗位报告（四合一：档案/匹配诊断/题库 30 题/投递状态）——交付物 PDF 的中间稿
+│       ├── tailored-resume.md    # 定制简历（独立产物，用于投递）
 │       ├── interview-plan.md     # 面试辅导计划
 │       ├── offer-{n}.md          # offer 条款与谈薪要点（收到 offer 时）
 │       ├── onboarding-90.md      # 30/60/90 天试用期计划（入职时）
@@ -71,18 +69,16 @@ offer-coach/
 1. **解析输入**
    - 截图：直接读图提取 JD 全文与公司/岗位/薪资等信息。
    - 文本/链接：粘贴文本直接用；链接用 WebFetch 抓取。
-   - 英文 JD：正常解析，分析输出用中文，专业术语保留英文对照（如 OEE、PPAP、SQE）。
+   - 英文 JD：正常解析，**全中文输出**，专业术语首次出现时括注中文解释（如 OEE 设备综合效率），正文以中文为主。
    - 简历：PDF/DOCX/MD/图片均可。若无 `resume/master.md`，先按模板 `assets/templates/master-resume.md` 归一化解析存入；已有则跳过，除非用户说"更新简历"。
 2. **信息补齐**（仅在必要字段缺失时）：公司名、岗位名、工作地点、薪资范围、JD 全文。**一次性问齐**，禁止分多轮挤牙膏。
 3. **读参考文件**：读 `references/job-analysis.md`（四维分析框架）和 `references/match-framework.md`（三分法诊断规则），按框架执行，不要凭感觉自由发挥。
-4. **产出五件套**，依次落盘：
-   - `profile.md` — 岗位档案 + 四维分析（岗位本质/核心要求/隐含要求/理想候选人），模板见 `assets/templates/profile.md`
-   - `match-report.md` — 三分法诊断，每条结论引用简历原文，模板 `assets/templates/match-report.md`
-   - `tailored-resume.md` — 定制简历：逐条"修改前/修改后"建议 + 完整重排版（单页 A4 结构），模板 `assets/templates/tailored-resume.md`
-   - `question-bank.md` — 15~20 题，三轨按 6:5:4 左右分配，设计规则见 `references/question-design.md`，模板 `assets/templates/question-bank.md`
-   - `jobs/index.md` — 更新岗位池索引，模板 `assets/templates/index.md`
-   - 🔴 CHECKPOINT：落盘后在会话内展示精要版（见第 5 步），等用户对差距 Top 3 无异议再收尾；用户提出异议时只修对应文件，不全量重做。**无人值守/批处理场景**（无法获得用户即时反馈时）：CHECKPOINT 降级为落盘 `summary.md` 后直接继续，不阻塞等待。
-5. **会话内展示精要版**，完整版在文件里（无人值守/批处理场景下，精要版写入该岗位目录的 `summary.md`）。精要版结构固定：
+4. **产出岗位报告（四合一 + PDF）**：
+   - 中间稿：`jobs/{job-id}/report.md` —— 按模板 `assets/templates/report.md` 依序填充四大节：①岗位档案与四维分析（原 profile）②简历匹配诊断（原 match-report）③题库（原 question-bank，30 题，规则见 `references/question-design.md`）④本岗位投递状态与漏斗（原 index 的岗位行）。无简历时②③节标注"（待简历）"占位，节标题保留。
+   - **最终交付：PDF**——把 report.md 渲染为 HTML 后转 PDF，落 `exports/{job-id}-岗位报告.pdf` 并在会话里给出路径。全中文输出。
+   - `jobs/index.md` 仅作跨岗位管理索引内部维护（模板 `assets/templates/index.md`），不属于对用户交付物。
+   - 🔴 CHECKPOINT：落盘后在会话内展示精要版（见第 5 步），等用户对差距 Top 3 无异议再收尾；用户提出异议时只修报告对应节，不全量重做。**无人值守/批处理场景**（无法获得用户即时反馈时）：CHECKPOINT 降级为落盘 `summary.md` 后直接继续，不阻塞等待。
+5. **会话内展示精要版**，完整版在 PDF 里（无人值守/批处理场景下，精要版写入该岗位目录的 `summary.md`）。精要版结构固定：
    - 岗位一句话画像（本质 + 最大风险信号）
    - 差距 Top 3（直接匹配 1 条 / 可迁移 1 条 / 关键缺口 1 条）
    - 题库清单（只列题目，不展开框架）
@@ -92,13 +88,13 @@ offer-coach/
 ## 独立流程（按用户请求触发）
 
 ### 面试辅导（用户收到面试通知）
-读 `references/interview-plan.md`。从通知文本/截图解析：时间、轮次、形式、面试官、注意事项；缺项一次问齐。产出 `interview-plan.md`（D-3/D-1/D-0 任务清单，模板 `assets/templates/interview-plan.md`）并主动提议创建提醒（用 automation 工具，一次性、面试前 2 小时）。**同岗位多轮面试**：新计划写入同一文件，前轮要点归入文件内"历轮存档"节，不覆盖丢失。引用该岗位 `question-bank.md` 生成押题重点，引用 `playbook.md` 里的历史卡点。🔴 CHECKPOINT：创建提醒前必须征得用户同意，拒绝就跳过且不再劝。
+读 `references/interview-plan.md`。从通知文本/截图解析：时间、轮次、形式、面试官、注意事项；缺项一次问齐。产出 `interview-plan.md`（D-3/D-1/D-0 任务清单，模板 `assets/templates/interview-plan.md`）并主动提议创建提醒（用 automation 工具，一次性、面试前 2 小时）。**同岗位多轮面试**：新计划写入同一文件，前轮要点归入文件内"历轮存档"节，不覆盖丢失。引用该岗位 `report.md` 题库节生成押题重点，引用 `playbook.md` 里的历史卡点。🔴 CHECKPOINT：创建提醒前必须征得用户同意，拒绝就跳过且不再劝。
 
 ### 面试复盘（用户面完后）
 读 `references/review-template.md`。引导用户口述或粘贴面试情况，产出 `review-{n}.md`。复盘卡必须有"下一场第一个要改的动作"——这是复盘有效的判据。落盘后：把新卡点合并进 `playbook.md`，并在会话里问一句是否更新简历话术。🔴 CHECKPOINT：复盘卡落盘后先向用户展示"下一场第一个要改的动作"，确认无误再反哺 playbook。
 
 ### 汇总导出（用户说"汇总"）
-合并 `jobs/*/question-bank.md`：按三轨归类、以题目核心句去重、保留首次出处（公司名）。**核心句判定**：去掉场景细节后的"动作+对象"（如"8D 报告 D4 步骤怎么写"）——两题核心句相同或仅同义替换才去重，**保留信息量大的一条并注明合并来源（如"含 @公司 的补充"）；信息量相当时，保留状态更靠前（更活跃面试中）岗位的版本**；不同问法即使话题相近也保留。**新建 job-id 前先遍历 index 同公司条目、读其 profile.md 的 JD 原文比较，避免误判为不同岗位。**输出 Markdown 到 `exports/`（文件名 `{YYYYMMDD}-汇总.md`），用户要 Word 时转交 workbuddy-docx 链路。同时输出投递漏斗统计表：分子取"约面及以上"状态数、分母取"已投及以上"状态数，允许跳态，**跳态岗位按其最高状态同时计入各档**；岗位样本 <5 时标注"样本量不足，不具统计意义"。
+合并 `jobs/*/report.md` 的题库节：按七类归类、以题目核心句去重、保留首次出处（公司名）。**核心句判定**：去掉场景细节后的"动作+对象"（如"8D 报告 D4 步骤怎么写"）——两题核心句相同或仅同义替换才去重，**保留信息量大的一条并注明合并来源（如"含 @公司 的补充"）；信息量相当时，保留状态更靠前（更活跃面试中）岗位的版本**；不同问法即使话题相近也保留。**新建 job-id 前先遍历 index 同公司条目、读其 profile.md 的 JD 原文比较，避免误判为不同岗位。**输出 Markdown 到 `exports/`（文件名 `{YYYYMMDD}-汇总.md`），用户要 Word 时转交 workbuddy-docx 链路。同时输出投递漏斗统计表：分子取"约面及以上"状态数、分母取"已投及以上"状态数，允许跳态，**跳态岗位按其最高状态同时计入各档**；岗位样本 <5 时标注"样本量不足，不具统计意义"。
 
 ### Offer 阶段与终局（谈薪 / 拒因 / 试用期）
 读 `references/offer-stage.md`。**收到 offer 或对方问期望薪资** → 谈薪准备（总包视角+锚定策略，产出 offer-{n}.md；≥2 个 offer 出比较矩阵，只列事实不做单选）。**状态改"挂"** → 拒因三层归因（HR 理由低可信/复盘自察中/3 家同环节挂=真信号），L3 真信号才动策略，单次被拒不调整。**状态改"入职"** → 用面试 Q15 收集的验收标准反推 30/60/90 天里程碑（onboarding-90.md），并提议建 automation 检查提醒——教练的 KPI 是试用期转正，不是入职当天。
