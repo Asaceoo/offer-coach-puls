@@ -20,6 +20,8 @@ description: 求职全流程教练：岗位截图/JD 分析、简历匹配诊断
 
 ```
 offer-coach/
+├── positioning.md                # 定位（岗位族/薪资底线/地理/行业偏好/能量）——岗位的第一道筛子
+├── story-cards.md                # 故事卡库（8~12 张结构化战例，标签即索引，所有参考答案的弹药源）
 ├── jobs/
 │   ├── index.md                  # 岗位池索引（总表）
 │   └── {job-id}/                 # job-id = 公司简称-岗位简称-MMDD，如 tongfu-pinzh-1024
@@ -28,6 +30,8 @@ offer-coach/
 │       ├── tailored-resume.md    # 定制简历
 │       ├── question-bank.md      # 题库（15~20 题）
 │       ├── interview-plan.md     # 面试辅导计划
+│       ├── offer-{n}.md          # offer 条款与谈薪要点（收到 offer 时）
+│       ├── onboarding-90.md      # 30/60/90 天试用期计划（入职时）
 │       └── review-{n}.md         # 历轮复盘卡
 ├── resume/master.md              # 主简历（结构化，一次解析反复复用，模板 assets/templates/master-resume.md）
 ├── playbook.md                   # 跨岗位沉淀：话术库、高频卡点、行业认知（首用即建空档，模板 assets/templates/playbook.md）
@@ -57,6 +61,8 @@ offer-coach/
 | 收到面试通知时该岗位档案不完整（如仅 profile） | 先基于 master.md 补齐 match-report / tailored-resume / question-bank（不要求用户重传简历），再出辅导计划 |
 
 ## 核心流程：一键全出
+
+**阶段 0 · 定位与故事卡（候选驱动的前提）**：首用或首次出现"要不要投/薪资合不合适"类判断时，读 `references/positioning-and-stories.md`，先做定位面谈（5 问落 `positioning.md`）并建立故事卡库（8~12 张落 `story-cards.md`）。**岗位分析前先对照定位**：与定位冲突的岗位（薪资低于底线/行业在排斥清单）直接建议不投。已有 positioning.md 时跳过面谈，仅在用户说"我的方向变了"时更新。面试题参考答案、简历改写、开场白的素材一律优先映射 `story-cards.md`（标签索引），卡片覆盖不足时提示用户补素材。
 
 触发条件：用户上传**岗位截图/JD**（配或不配简历）。这是默认交互，不要逐阶段挤牙膏式追问。
 
@@ -94,15 +100,20 @@ offer-coach/
 ### 汇总导出（用户说"汇总"）
 合并 `jobs/*/question-bank.md`：按三轨归类、以题目核心句去重、保留首次出处（公司名）。**核心句判定**：去掉场景细节后的"动作+对象"（如"8D 报告 D4 步骤怎么写"）——两题核心句相同或仅同义替换才去重，**保留信息量大的一条并注明合并来源（如"含 @公司 的补充"）；信息量相当时，保留状态更靠前（更活跃面试中）岗位的版本**；不同问法即使话题相近也保留。**新建 job-id 前先遍历 index 同公司条目、读其 profile.md 的 JD 原文比较，避免误判为不同岗位。**输出 Markdown 到 `exports/`（文件名 `{YYYYMMDD}-汇总.md`），用户要 Word 时转交 workbuddy-docx 链路。同时输出投递漏斗统计表：分子取"约面及以上"状态数、分母取"已投及以上"状态数，允许跳态，**跳态岗位按其最高状态同时计入各档**；岗位样本 <5 时标注"样本量不足，不具统计意义"。
 
+### Offer 阶段与终局（谈薪 / 拒因 / 试用期）
+读 `references/offer-stage.md`。**收到 offer 或对方问期望薪资** → 谈薪准备（总包视角+锚定策略，产出 offer-{n}.md；≥2 个 offer 出比较矩阵，只列事实不做单选）。**状态改"挂"** → 拒因三层归因（HR 理由低可信/复盘自察中/3 家同环节挂=真信号），L3 真信号才动策略，单次被拒不调整。**状态改"入职"** → 用面试 Q15 收集的验收标准反推 30/60/90 天里程碑（onboarding-90.md），并提议建 automation 检查提醒——教练的 KPI 是试用期转正，不是入职当天。
+
 ## 参考文件加载指引
 
 | 何时读 | 读什么 |
 |---|---|
+| 首次使用 / 出现投递判断类问题 | `references/positioning-and-stories.md`（定位面谈+故事卡+押题校准+能量排程） |
 | 解析/分析岗位前 | `references/job-analysis.md` |
 | 简历匹配/定制前 | `references/match-framework.md` |
 | 出题前 | `references/question-design.md` |
 | 面试辅导前 | `references/interview-plan.md` |
 | 复盘前 | `references/review-template.md` |
+| 收到 offer / 被拒 / 入职 | `references/offer-stage.md` |
 
 ## 模板使用规则
 
