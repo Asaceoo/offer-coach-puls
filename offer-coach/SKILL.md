@@ -74,7 +74,7 @@ offer-coach/
 2. **信息补齐**（仅在必要字段缺失时）：公司名、岗位名、工作地点、薪资范围、JD 全文。**一次性问齐**，禁止分多轮挤牙膏。
 3. **读参考文件**：读 `references/job-analysis.md`（四维分析框架）和 `references/match-framework.md`（三分法诊断规则），按框架执行，不要凭感觉自由发挥。
 4. **产出岗位报告（四合一 + PDF）**：
-   - 中间稿：`jobs/{job-id}/report.md` —— 按模板 `assets/templates/report.md` 依序填充四大节：①岗位档案与四维分析（原 profile）②简历匹配诊断（原 match-report）③题库（原 question-bank，30 题，规则见 `references/question-design.md`）④本岗位投递状态与漏斗（原 index 的岗位行）。无简历时②③节标注"（待简历）"占位，节标题保留。
+   - 中间稿：`jobs/{job-id}/report.md` —— 按模板 `assets/templates/report.md` 依序填充四大节：①岗位档案与四维分析（原 profile）②简历匹配诊断（原 match-report）③题库（原 question-bank，**50 题七类，±5 浮动**，规则见 `references/question-design.md`）④本岗位投递状态与漏斗（原 index 的岗位行）。无简历时②③节标注"（待简历）"占位，节标题保留。
    - **最终交付：PDF**——把 report.md 渲染为 HTML 后转 PDF，落 `exports/{job-id}-岗位报告.pdf` 并在会话里给出路径。全中文输出。
    - `jobs/index.md` 仅作跨岗位管理索引内部维护（模板 `assets/templates/index.md`），不属于对用户交付物。
    - 🔴 CHECKPOINT：落盘后在会话内展示精要版（见第 5 步），等用户对差距 Top 3 无异议再收尾；用户提出异议时只修报告对应节，不全量重做。**无人值守/批处理场景**（无法获得用户即时反馈时）：CHECKPOINT 降级为落盘 `summary.md` 后直接继续，不阻塞等待。
