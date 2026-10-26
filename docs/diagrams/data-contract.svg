@@ -1,59 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" font-family="Microsoft YaHei, SimSun, sans-serif">
-  <rect x="0" y="0" width="680" height="320" fill="#f7fafc"/>
-  <text x="340" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a5276">数据契约：技能读什么、写什么</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" font-family="Microsoft YaHei, SimSun, sans-serif">
+  <rect x="0" y="0" width="680" height="330" fill="#f7fafc"/>
+  <text x="340" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a5276">数据契约：技能读什么、写什么（全部本地，不上云）</text>
 
-  <!-- 技能层 -->
-  <rect x="30" y="46" width="200" height="248" rx="8" fill="#eaf2f8" stroke="#2874a6" stroke-width="1.5"/>
-  <text x="130" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a5276">技能层（只读）</text>
-  <text x="130" y="92" text-anchor="middle" font-size="10.5" fill="#333">SKILL.md（流程+红线）</text>
-  <text x="130" y="114" text-anchor="middle" font-size="10.5" fill="#333">references/ ×7</text>
-  <text x="46" y="136" font-size="10" fill="#555">· job-analysis（四维+七问）</text>
-  <text x="46" y="152" font-size="10" fill="#555">· match-framework（三分法）</text>
-  <text x="46" y="168" font-size="10" fill="#555">· question-design（55题八类）</text>
-  <text x="46" y="184" font-size="10" fill="#555">· interview-plan（D-N 计划）</text>
-  <text x="46" y="200" font-size="10" fill="#555">· review-template（复盘反哺）</text>
-  <text x="46" y="216" font-size="10" fill="#555">· positioning-and-stories</text>
-  <text x="46" y="232" font-size="10" fill="#555">· offer-stage（终局护航）</text>
-  <text x="130" y="256" text-anchor="middle" font-size="10.5" fill="#333">templates/ ×9（唯一格式来源）</text>
-  <text x="130" y="276" text-anchor="middle" font-size="10" fill="#888">按需加载，非常驻</text>
+  <rect x="20" y="42" width="196" height="244" rx="8" fill="#eaf2f8" stroke="#2874a6" stroke-width="1.5"/>
+  <text x="118" y="62" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a5276">技能层（只读）</text>
+  <text x="118" y="84" text-anchor="middle" font-size="10.5" fill="#333">SKILL.md（流程+红线+失败分支）</text>
+  <text x="118" y="104" text-anchor="middle" font-size="10.5" fill="#333">references/ ×7（按需加载）</text>
+  <text x="34" y="124" font-size="9.5" fill="#555">job-analysis 四维+七问 ｜ match-framework 三分法+六维</text>
+  <text x="34" y="139" font-size="9.5" fill="#555">question-design 50 题八类+六维覆盖 ｜ interview-plan 押题查漏</text>
+  <text x="34" y="154" font-size="9.5" fill="#555">review-template 复盘反哺 ｜ positioning-and-stories 定位+卡</text>
+  <text x="34" y="169" font-size="9.5" fill="#555">offer-stage 谈薪/拒因/90 天</text>
+  <text x="118" y="192" text-anchor="middle" font-size="10.5" fill="#333">assets/templates/ ×13</text>
+  <text x="118" y="210" text-anchor="middle" font-size="9.5" fill="#888">唯一输出格式来源</text>
+  <text x="118" y="232" text-anchor="middle" font-size="9.5" fill="#888">报告 · 精练卡 · 定位 · 故事卡</text>
+  <text x="118" y="247" text-anchor="middle" font-size="9.5" fill="#888">简历 · 辅导 · 复盘 · offer</text>
+  <text x="118" y="262" text-anchor="middle" font-size="9.5" fill="#888">onboarding · 拒因 · 索引</text>
 
-  <!-- 箭头 -->
   <defs>
-    <marker id="arr2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6 z" fill="#b7950b"/>
-    </marker>
-    <marker id="arr3" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6 z" fill="#2874a6"/>
-    </marker>
+    <marker id="b" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#b7950b"/></marker>
+    <marker id="c" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#2874a6"/></marker>
   </defs>
-  <line x1="230" y1="110" x2="278" y2="110" stroke="#b7950b" stroke-width="1.5" marker-end="url(#arr2)"/>
-  <line x1="278" y1="230" x2="230" y2="230" stroke="#2874a6" stroke-width="1.5" marker-end="url(#arr3)"/>
-  <text x="254" y="100" text-anchor="middle" font-size="9.5" fill="#7d6608">读上下文</text>
-  <text x="254" y="222" text-anchor="middle" font-size="9.5" fill="#1a5276">写产出</text>
+  <line x1="216" y1="110" x2="262" y2="110" stroke="#b7950b" stroke-width="1.5" marker-end="url(#b)"/>
+  <line x1="262" y1="232" x2="216" y2="232" stroke="#2874a6" stroke-width="1.5" marker-end="url(#c)"/>
+  <text x="239" y="100" text-anchor="middle" font-size="9" fill="#7d6608">读上下文</text>
+  <text x="239" y="224" text-anchor="middle" font-size="9" fill="#1a5276">写产出</text>
 
-  <!-- 工作区层 -->
-  <rect x="280" y="46" width="370" height="248" rx="8" fill="#fdf6e3" stroke="#b7950b" stroke-width="1.5"/>
-  <text x="465" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#7d6608">工作区 offer-coach/（读写，全部本地）</text>
+  <rect x="264" y="42" width="396" height="244" rx="8" fill="#fdf6e3" stroke="#b7950b" stroke-width="1.5"/>
+  <text x="462" y="62" text-anchor="middle" font-size="12" font-weight="bold" fill="#7d6608">工作区 offer-coach/（读写）</text>
 
-  <rect x="296" y="82" width="160" height="56" rx="6" fill="#ffffff" stroke="#b7950b"/>
-  <text x="376" y="100" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7d6608">positioning.md</text>
-  <text x="376" y="116" text-anchor="middle" font-size="9.5" fill="#555">定位（5问）·岗位筛子</text>
-  <text x="376" y="130" text-anchor="middle" font-size="9.5" fill="#555">story-cards.md 故事卡</text>
+  <rect x="278" y="74" width="176" height="56" rx="6" fill="#ffffff" stroke="#b7950b"/>
+  <text x="366" y="92" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7d6608">positioning.md + story-cards.md</text>
+  <text x="366" y="108" text-anchor="middle" font-size="9.5" fill="#555">定位 5 问 ｜ 战例卡 SC-xx</text>
+  <text x="366" y="122" text-anchor="middle" font-size="9.5" fill="#555">失败卡 SC-Fxx（压力题唯一素材源）</text>
 
-  <rect x="466" y="82" width="168" height="56" rx="6" fill="#ffffff" stroke="#b7950b"/>
-  <text x="550" y="100" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7d6608">resume/master.md</text>
-  <text x="550" y="116" text-anchor="middle" font-size="9.5" fill="#555">简历唯一事实源</text>
-  <text x="550" y="130" text-anchor="middle" font-size="9.5" fill="#555">引用锚点=本文件条目</text>
+  <rect x="466" y="74" width="180" height="56" rx="6" fill="#ffffff" stroke="#b7950b"/>
+  <text x="556" y="92" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7d6608">resume/master.md</text>
+  <text x="556" y="108" text-anchor="middle" font-size="9.5" fill="#555">简历唯一事实源</text>
+  <text x="556" y="122" text-anchor="middle" font-size="9.5" fill="#555">所有引用的锚点</text>
 
-  <rect x="296" y="148" width="338" height="56" rx="6" fill="#ffffff" stroke="#b7950b"/>
-  <text x="465" y="166" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7d6608">jobs/{job-id}/（一岗一目录）</text>
-  <text x="465" y="182" text-anchor="middle" font-size="9.5" fill="#555">report.md（六部分）→ exports/岗位报告.pdf ｜ tailored-resume.md</text>
-  <text x="465" y="196" text-anchor="middle" font-size="9.5" fill="#555">interview-plan.md ｜ review-{n}.md ｜ offer-{n}.md ｜ onboarding-90.md</text>
+  <rect x="278" y="140" width="368" height="60" rx="6" fill="#ffffff" stroke="#b7950b"/>
+  <text x="462" y="158" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7d6608">jobs/{job-id}/（一岗一目录 · 一岗一报告）</text>
+  <text x="462" y="174" text-anchor="middle" font-size="9.5" fill="#555">report.md（六部分，含 4.2 六维评估卡）→ exports/岗位报告.pdf</text>
+  <text x="462" y="188" text-anchor="middle" font-size="9.5" fill="#555">p0-card.md → exports/P0精练卡.pdf ｜ tailored-resume.md</text>
 
-  <rect x="296" y="214" width="338" height="62" rx="6" fill="#ffffff" stroke="#b7950b"/>
-  <text x="465" y="232" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7d6608">jobs/index.md（岗位池·状态唯一事实源）</text>
-  <text x="465" y="248" text-anchor="middle" font-size="9.5" fill="#555">job-id ｜ 公司 ｜ 岗位 ｜ 薪资 ｜ 状态（收藏→…→入职/挂）｜ 产出物 n/4 ｜ 漏斗</text>
-  <text x="465" y="266" text-anchor="middle" font-size="9.5" fill="#555">playbook.md（话术库+顽固卡点，复盘反哺写入）</text>
+  <rect x="278" y="210" width="368" height="62" rx="6" fill="#ffffff" stroke="#b7950b"/>
+  <text x="462" y="228" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#7d6608">jobs/index.md（状态唯一事实源）｜ playbook.md（话术+顽固卡点）</text>
+  <text x="462" y="244" text-anchor="middle" font-size="9.5" fill="#555">interview-plan.md ｜ review-{n}.md ｜ offer-{n}.md ｜ onboarding-90.md</text>
+  <text x="462" y="260" text-anchor="middle" font-size="9.5" fill="#555">导出物默认含个人信息 → 分享前删除联系方式与薪酬信息</text>
 
-  <text x="340" y="308" text-anchor="middle" font-size="10" fill="#888">红线：所有结论引用 master.md 原文 ｜ 缺数据标【待补】不代编 ｜ 数据不上云</text>
+  <text x="340" y="310" text-anchor="middle" font-size="10" fill="#888">红线：所有结论引用 master.md 原文 ｜ 缺数据标【待补】不代编 ｜ 报告与索引不混岗 ｜ 数据不上云</text>
 </svg>

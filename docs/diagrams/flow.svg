@@ -1,70 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" font-family="Microsoft YaHei, SimSun, sans-serif">
   <rect x="0" y="0" width="680" height="300" fill="#f7fafc"/>
-  <text x="340" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a5276">offer-coach 求职全流程：五个阶段</text>
-
-  <!-- 阶段框 -->
-  <g>
-    <rect x="30" y="60" width="120" height="150" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
-    <text x="90" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a5276">① 定位</text>
-    <text x="90" y="104" text-anchor="middle" font-size="10.5" fill="#333">5 问定位面谈</text>
-    <text x="90" y="122" text-anchor="middle" font-size="10.5" fill="#333">positioning.md</text>
-    <text x="90" y="140" text-anchor="middle" font-size="10.5" fill="#333">故事卡弹药库</text>
-    <text x="90" y="158" text-anchor="middle" font-size="10.5" fill="#333">story-cards.md</text>
-    <text x="90" y="188" text-anchor="middle" font-size="10" fill="#888">岗位的第一道筛子</text>
-  </g>
-  <g>
-    <rect x="170" y="60" width="120" height="150" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
-    <text x="230" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a5276">② 岗位分析</text>
-    <text x="230" y="104" text-anchor="middle" font-size="10.5" fill="#333">JD 截图/文本</text>
-    <text x="230" y="122" text-anchor="middle" font-size="10.5" fill="#333">深度调研（按需）</text>
-    <text x="230" y="140" text-anchor="middle" font-size="10.5" fill="#333">六部分报告 PDF</text>
-    <text x="230" y="158" text-anchor="middle" font-size="10.5" fill="#333">51~60 题八类题库</text>
-    <text x="230" y="188" text-anchor="middle" font-size="10" fill="#888">一岗一报告·不混岗</text>
-  </g>
-  <g>
-    <rect x="310" y="60" width="120" height="150" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
-    <text x="370" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a5276">③ 备战</text>
-    <text x="370" y="104" text-anchor="middle" font-size="10.5" fill="#333">定制简历</text>
-    <text x="370" y="122" text-anchor="middle" font-size="10.5" fill="#333">D-3/D-1/D-0 计划</text>
-    <text x="370" y="140" text-anchor="middle" font-size="10.5" fill="#333">押题+能量排程</text>
-    <text x="370" y="158" text-anchor="middle" font-size="10.5" fill="#333">提醒（可选）</text>
-    <text x="370" y="188" text-anchor="middle" font-size="10" fill="#888">参考答案=真实素材装填</text>
-  </g>
-  <g>
-    <rect x="450" y="60" width="120" height="150" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
-    <text x="510" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a5276">④ 面试+复盘</text>
-    <text x="510" y="104" text-anchor="middle" font-size="10.5" fill="#333">复盘卡</text>
-    <text x="510" y="122" text-anchor="middle" font-size="10.5" fill="#333">押题命中率</text>
-    <text x="510" y="140" text-anchor="middle" font-size="10.5" fill="#333">卡点→playbook</text>
-    <text x="510" y="158" text-anchor="middle" font-size="10.5" fill="#333">新题回填题库</text>
-    <text x="510" y="188" text-anchor="middle" font-size="10" fill="#888">下一场第一个要改的动作</text>
-  </g>
-  <g>
-    <rect x="590" y="60" width="70" height="150" rx="8" fill="#eaf2f8" stroke="#1a5276" stroke-width="1.5"/>
-    <text x="625" y="82" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1a5276">⑤ 终局</text>
-    <text x="625" y="104" text-anchor="middle" font-size="10" fill="#333">谈薪</text>
-    <text x="625" y="122" text-anchor="middle" font-size="10" fill="#333">拒因归因</text>
-    <text x="625" y="140" text-anchor="middle" font-size="10" fill="#333">90天计划</text>
-    <text x="625" y="188" text-anchor="middle" font-size="9.5" fill="#888">KPI=转正</text>
-  </g>
-
-  <!-- 箭头 -->
+  <text x="340" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a5276">offer-coach 五阶段：先看懂岗位，再决定怎么投</text>
   <defs>
-    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6 z" fill="#1a5276"/>
-    </marker>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#1a5276"/></marker>
   </defs>
-  <line x1="150" y1="135" x2="168" y2="135" stroke="#1a5276" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="290" y1="135" x2="308" y2="135" stroke="#1a5276" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="430" y1="135" x2="448" y2="135" stroke="#1a5276" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="570" y1="135" x2="588" y2="135" stroke="#1a5276" stroke-width="1.5" marker-end="url(#arr)"/>
 
-  <!-- 底部沉淀层 -->
-  <rect x="30" y="232" width="630" height="50" rx="8" fill="#fdf6e3" stroke="#b7950b" stroke-width="1"/>
-  <text x="340" y="252" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#7d6608">跨阶段沉淀（越用越厚）</text>
-  <text x="340" y="270" text-anchor="middle" font-size="10.5" fill="#7d6608">master.md 简历事实源 ｜ story-cards 故事卡 ｜ playbook 话术库+顽固卡点 ｜ jobs/index.md 岗位池与漏斗</text>
-  <line x1="90" y1="210" x2="90" y2="230" stroke="#b7950b" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="230" y1="210" x2="230" y2="230" stroke="#b7950b" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="370" y1="210" x2="370" y2="230" stroke="#b7950b" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="510" y1="210" x2="510" y2="230" stroke="#b7950b" stroke-width="1" stroke-dasharray="3,3"/>
+  <g>
+    <rect x="24" y="52" width="118" height="132" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
+    <text x="83" y="72" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1a5276">① 定位</text>
+    <text x="83" y="92" text-anchor="middle" font-size="10" fill="#333">5 问定位面谈</text>
+    <text x="83" y="108" text-anchor="middle" font-size="10" fill="#333">故事卡 + 失败卡</text>
+    <text x="83" y="126" text-anchor="middle" font-size="10" fill="#333">岗位第一道筛子</text>
+    <text x="83" y="152" text-anchor="middle" font-size="9.5" fill="#888">底线以下直接不投</text>
+  </g>
+  <g>
+    <rect x="158" y="52" width="118" height="132" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
+    <text x="217" y="72" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1a5276">② 岗位分析</text>
+    <text x="217" y="92" text-anchor="middle" font-size="10" fill="#333">六部分报告 PDF</text>
+    <text x="217" y="108" text-anchor="middle" font-size="10" fill="#333">八类 51~60 题</text>
+    <text x="217" y="126" text-anchor="middle" font-size="10" fill="#333">公司深度调研</text>
+    <text x="217" y="152" text-anchor="middle" font-size="9.5" fill="#888">一岗一报告·不混岗</text>
+  </g>
+  <g>
+    <rect x="292" y="52" width="118" height="132" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
+    <text x="351" y="72" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1a5276">③ 备战</text>
+    <text x="351" y="92" text-anchor="middle" font-size="10" fill="#333">D-3/D-1/D-0 计划</text>
+    <text x="351" y="108" text-anchor="middle" font-size="10" fill="#333">押题按六维查漏</text>
+    <text x="351" y="126" text-anchor="middle" font-size="10" fill="#333">P0 精练卡（1 页）</text>
+    <text x="351" y="152" text-anchor="middle" font-size="9.5" fill="#888">能量排程·提醒可选</text>
+  </g>
+  <g>
+    <rect x="426" y="52" width="118" height="132" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
+    <text x="485" y="72" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1a5276">④ 面试+复盘</text>
+    <text x="485" y="92" text-anchor="middle" font-size="10" fill="#333">压力彩排（红队）</text>
+    <text x="485" y="108" text-anchor="middle" font-size="10" fill="#333">押题命中率</text>
+    <text x="485" y="126" text-anchor="middle" font-size="10" fill="#333">反哺话术库+题库</text>
+    <text x="485" y="152" text-anchor="middle" font-size="9.5" fill="#888">下一场第一个动作</text>
+  </g>
+  <g>
+    <rect x="560" y="52" width="96" height="132" rx="8" fill="#eaf2f8" stroke="#1a5276" stroke-width="1.5"/>
+    <text x="608" y="72" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1a5276">⑤ 终局</text>
+    <text x="608" y="92" text-anchor="middle" font-size="10" fill="#333">谈薪</text>
+    <text x="608" y="108" text-anchor="middle" font-size="10" fill="#333">拒因归因</text>
+    <text x="608" y="126" text-anchor="middle" font-size="10" fill="#333">90 天计划</text>
+    <text x="608" y="152" text-anchor="middle" font-size="9.5" fill="#888">KPI=转正</text>
+  </g>
+
+  <line x1="142" y1="118" x2="156" y2="118" stroke="#1a5276" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="276" y1="118" x2="290" y2="118" stroke="#1a5276" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="410" y1="118" x2="424" y2="118" stroke="#1a5276" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="544" y1="118" x2="558" y2="118" stroke="#1a5276" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <rect x="24" y="200" width="632" height="80" rx="8" fill="#fdf6e3" stroke="#b7950b" stroke-width="1"/>
+  <text x="340" y="220" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#7d6608">三条贯穿全程的红线</text>
+  <text x="340" y="240" text-anchor="middle" font-size="10.5" fill="#7d6608">① 反虚构：结论引用简历原文，缺数据标【待补】不代编</text>
+  <text x="340" y="256" text-anchor="middle" font-size="10.5" fill="#7d6608">② 无匹配百分比：差距用三分法 + 六维评估卡表达</text>
+  <text x="340" y="272" text-anchor="middle" font-size="10.5" fill="#7d6608">③ 不做自动投递：只准备材料，不碰招聘账号</text>
 </svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" font-family="Microsoft YaHei, SimSun, sans-serif">
+  <rect x="0" y="0" width="680" height="320" fill="#f7fafc"/>
+  <text x="340" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a5276">面试六维评估卡：把面试官的评分表变成你的备战清单</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#666">报告 4.2 节 · 与 4.1 三分法并列（三分法回答「配不配」，六维卡回答「怎么被打分、怎么防」）</text>
+
+  <rect x="20" y="58" width="200" height="232" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
+  <text x="120" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a5276">六维（固定不可增删）</text>
+  <text x="34" y="102" font-size="10.5" fill="#333">① 硬实力与岗位胜任力</text>
+  <text x="34" y="124" font-size="10.5" fill="#333">② 软实力与思维方式</text>
+  <text x="34" y="146" font-size="10.5" fill="#333">③ 岗位与团队匹配度</text>
+  <text x="34" y="168" font-size="10.5" fill="#333">④ 动机与稳定性</text>
+  <text x="34" y="190" font-size="10.5" fill="#333">⑤ 文化与价值观契合</text>
+  <text x="34" y="212" font-size="10.5" fill="#333">⑥ 潜力与性价比</text>
+  <text x="34" y="238" font-size="9.5" fill="#888">每维都要落到「证据」——</text>
+  <text x="34" y="252" font-size="9.5" fill="#888">做过什么 / 怎么做的 / 结果如何</text>
+  <text x="34" y="276" font-size="9.5" fill="#b03a2e">禁：形容词式自我评价</text>
+
+  <rect x="240" y="58" width="200" height="232" rx="8" fill="#ffffff" stroke="#1a5276" stroke-width="1.5"/>
+  <text x="340" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a5276">每维四栏</text>
+  <text x="254" y="104" font-size="10.5" fill="#333">① 他在测什么（评分维度）</text>
+  <text x="254" y="128" font-size="10.5" fill="#333">② 你的证据（引简历原文）</text>
+  <text x="254" y="152" font-size="10.5" fill="#333">③ 风险（最可能翻车处）</text>
+  <text x="254" y="176" font-size="10.5" fill="#333">④ 怎么证明（面试动作）</text>
+  <line x1="254" y1="190" x2="426" y2="190" stroke="#ddd"/>
+  <text x="254" y="210" font-size="10" font-weight="bold" fill="#1a5276">覆盖度自检</text>
+  <text x="254" y="228" font-size="9.5" fill="#555">任一维证据为空或全是【待补】</text>
+  <text x="254" y="243" font-size="9.5" fill="#555">→ 该维面试必挨打</text>
+  <text x="254" y="262" font-size="9.5" fill="#555">→ 补素材 / 补题 / 改叙事</text>
+  <text x="254" y="281" font-size="9.5" fill="#888">末尾点名「最弱维度 + 下一步动作」</text>
+
+  <rect x="460" y="58" width="200" height="232" rx="8" fill="#fdf6e3" stroke="#b7950b" stroke-width="1.5"/>
+  <text x="560" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#7d6608">三层联动</text>
+  <text x="474" y="102" font-size="10.5" fill="#7d6608">报告层</text>
+  <text x="474" y="118" font-size="9.5" fill="#7d6608">三分法 + 六维卡并列</text>
+  <text x="474" y="146" font-size="10.5" fill="#7d6608">出题层</text>
+  <text x="474" y="162" font-size="9.5" fill="#7d6608">六维覆盖自检：缺一维补一题</text>
+  <text x="474" y="190" font-size="10.5" fill="#7d6608">辅导层</text>
+  <text x="474" y="206" font-size="9.5" fill="#7d6608">押题按六维查漏</text>
+  <text x="474" y="221" font-size="9.5" fill="#7d6608">最弱维度必押 1 题</text>
+  <text x="474" y="250" font-size="10.5" fill="#7d6608">面试当天</text>
+  <text x="474" y="266" font-size="9.5" fill="#7d6608">先看 P0 精练卡（1 页）</text>
+  <text x="474" y="281" font-size="9.5" fill="#7d6608">再看六维卡的「风险」栏</text>
+</svg>
